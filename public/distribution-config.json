@@ -1,0 +1,36 @@
+
+  {
+    "CallerReference": "unique-string",
+    "Aliases": {
+      "Quantity": 0
+    },
+    "DefaultRootObject": "index.html",
+    "Origins": {
+      "Quantity": 1,
+      "Items": [
+        {
+          "Id": "S3-Origin",
+          "DomainName": "localhost:4566",
+          "OriginPath": "/cdk-hnb659fds-assets-000000000000-sa-east-1",
+          "S3OriginConfig": {
+            "OriginAccessIdentity": ""  
+          }
+        }
+      ]
+    },
+    "DefaultCacheBehavior": {
+      "TargetOriginId": "S3-Origin",
+      "ViewerProtocolPolicy": "redirect-to-https",
+      "AllowedMethods": {
+        "Items": ["GET", "HEAD"],
+        "Quantity": 2,
+        "CachedMethods": {
+          "Items": ["GET", "HEAD"],
+          "Quantity": 2
+        }
+      },
+      "ResponseHeadersPolicyId": "4af83c2f"
+    },
+    "Enabled": true,
+    "Comment": "" 
+  }

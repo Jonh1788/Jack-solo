@@ -1,0 +1,27 @@
+{
+    "ResponseHeadersPolicyConfig": {
+        "Name": "CORS-Policy",
+        "CorsConfig": {
+            "AccessControlAllowOrigins": {
+                "Items": ["*"],
+                "Quantity": 1
+            },
+            "AccessControlAllowHeaders": {
+                "Items": ["*"],
+                "Quantity": 1
+            },
+            "AccessControlAllowMethods": {
+                "Items": ["GET", "POST", "OPTIONS"],
+                "Quantity": 3
+            },
+            "AccessControlAllowCredentials": false,
+            "AccessControlExposeHeaders": {
+                "Items": ["*"],
+                "Quantity": 1
+            },
+            "AccessControlMaxAgeSec": 300,
+            "OriginOverride": true
+        },
+        "Comment": "CORS policy for CloudFront"
+    }
+}
